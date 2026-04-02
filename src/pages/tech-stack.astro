@@ -17,56 +17,221 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Content Sections -->
   <section class="py-16 px-6 max-w-4xl mx-auto">
-    <!-- Placeholder for content -->
+    <div class="mb-12 p-8 rounded-lg bg-accent/5 border border-accent/20">
+      <p class="text-lg text-gray-300 mb-2">
+        The commercial real estate tech stack is experiencing rapid consolidation around proven, production-ready solutions.
+      </p>
+      <p class="text-gray-400">
+        <strong>Market Trend:</strong> Companies are moving from pilot phase (92% have pilots) to production deployment (5% achieved objectives). Success requires focusing on high-impact applications and building data infrastructure first.
+      </p>
+    </div>
+
     <div class="space-y-12">
       <div class="border-l-4 border-primary pl-8">
-        <h2 class="text-3xl font-bold mb-4 gradient-text">
-          Core AI Technologies
+        <h2 class="text-3xl font-bold mb-6 gradient-text">
+          Generative AI & Large Language Models
         </h2>
-        <p class="text-gray-400 mb-4">
-          Content coming soon. We're curating information on the foundational AI technologies transforming real estate.
+        <p class="text-gray-300 mb-6">
+          Large Language Models (LLMs) are becoming the intelligent backbone for CRE operations. These foundation models power everything from document analysis to customer service to market insights.
         </p>
+
+        <h3 class="text-2xl font-bold text-primary mb-4">Core Technologies</h3>
+        <div class="space-y-4">
+          <div class="p-4 rounded bg-primary/5 border border-primary/20">
+            <h4 class="font-bold text-primary mb-2">General-Purpose LLMs</h4>
+            <p class="text-gray-400 mb-2"><strong>ChatGPT, Claude, Gemini:</strong> General models trained on broad data, increasingly fine-tuned for industry-specific tasks</p>
+            <p class="text-gray-400 text-sm">Use cases: Property descriptions, lease analysis, market research summaries, documentation automation</p>
+          </div>
+
+          <div class="p-4 rounded bg-primary/5 border border-primary/20">
+            <h4 class="font-bold text-primary mb-2">CRE-Specific Integrations</h4>
+            <p class="text-gray-400 mb-2"><strong>Yardi + Claude:</strong> First native Claude integration in property management software (2026). Enables AI-powered lease analysis, tenant communication, and operational insights directly in property management systems</p>
+            <p class="text-gray-400 text-sm">Impact: Property managers access institutional-grade AI without switching tools</p>
+          </div>
+
+          <div class="p-4 rounded bg-primary/5 border border-primary/20">
+            <h4 class="font-bold text-primary mb-2">Document Analysis & Extraction</h4>
+            <p class="text-gray-400 mb-2">LLMs extract critical information from unstructured documents: lease terms, financial statements, appraisals, tenant agreements</p>
+            <p class="text-gray-400 text-sm">Enables 70-90% reduction in manual document processing time</p>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-primary mb-4 mt-8">Key Applications</h3>
+        <ul class="text-gray-400 space-y-2">
+          <li class="flex gap-2"><span class="text-primary">→</span> <span>Automated lease abstraction and key term identification</span></li>
+          <li class="flex gap-2"><span class="text-primary">→</span> <span>Tenant communication and chatbots</span></li>
+          <li class="flex gap-2"><span class="text-primary">→</span> <span>Market research summaries and competitive analysis</span></li>
+          <li class="flex gap-2"><span class="text-primary">→</span> <span>Investment memoranda generation</span></li>
+          <li class="flex gap-2"><span class="text-primary">→</span> <span>Compliance and regulatory documentation</span></li>
+        </ul>
       </div>
 
       <div class="border-l-4 border-secondary pl-8">
-        <h2 class="text-3xl font-bold mb-4 gradient-text">
-          Enterprise AI Agents
+        <h2 class="text-3xl font-bold mb-6 gradient-text">
+          Specialized CRE AI Platforms
         </h2>
-        <p class="text-gray-400 mb-4">
-          Explore the intelligent agents that are automating key real estate processes and workflows.
+        <p class="text-gray-300 mb-6">
+          Industry-specific platforms purpose-built for commercial real estate are becoming table stakes. These solutions integrate AI with CRE-specific workflows and domain knowledge.
         </p>
+
+        <h3 class="text-2xl font-bold text-secondary mb-4">Market Leaders by Function</h3>
+
+        <div class="space-y-6">
+          <div class="p-4 rounded bg-secondary/5 border border-secondary/20">
+            <h4 class="font-bold text-secondary mb-2">Building Operations & Energy Management</h4>
+            <p class="text-gray-400 mb-2"><strong>BrainBox AI (Trane), Ekotrope:</strong> Autonomous building management across 4,000+ properties globally</p>
+            <p class="text-gray-400">• Energy cost reduction: 15-35%</p>
+            <p class="text-gray-400">• Maintenance downtime reduction: 40-50%</p>
+            <p class="text-gray-400 text-sm">Latest: BrainBox's generative AI layer (ARIA) adds predictive maintenance and anomaly detection</p>
+          </div>
+
+          <div class="p-4 rounded bg-secondary/5 border border-secondary/20">
+            <h4 class="font-bold text-secondary mb-2">Property Management & Leasing</h4>
+            <p class="text-gray-400 mb-2"><strong>Yardi Systems, AppFolio:</strong> Enterprise property management platforms integrating AI for tenant management, lease automation, and operational efficiency</p>
+            <p class="text-gray-400">• Yardi: First Claude integration in CRE software</p>
+            <p class="text-gray-400">• Focus: Embedded AI without switching applications</p>
+          </div>
+
+          <div class="p-4 rounded bg-secondary/5 border border-secondary/20">
+            <h4 class="font-bold text-secondary mb-2">Leasing & Market Intelligence</h4>
+            <p class="text-gray-400 mb-2"><strong>VTS, CoStar:</strong> Real-time market intelligence and tenant analytics</p>
+            <p class="text-gray-400">• VTS: 6-12 month demand forecasting</p>
+            <p class="text-gray-400">• Lead-to-lease conversion improvement: 15-20%</p>
+            <p class="text-gray-400 text-sm">Capability: Real-time competitive pricing and market monitoring</p>
+          </div>
+
+          <div class="p-4 rounded bg-secondary/5 border border-secondary/20">
+            <h4 class="font-bold text-secondary mb-2">Financial Analysis & Portfolio Management</h4>
+            <p class="text-gray-400 mb-2"><strong>IntellCRE, Altus Group, Argus Enterprise:</strong> AI-powered financial modeling and portfolio optimization</p>
+            <p class="text-gray-400">• IntellCRE: Instant valuation and sensitivity analysis</p>
+            <p class="text-gray-400">• Altus: Valuation prep time reduction of 50-70%</p>
+            <p class="text-gray-400 text-sm">Latest: Generative AI capabilities for deal analysis and reporting</p>
+          </div>
+
+          <div class="p-4 rounded bg-secondary/5 border border-secondary/20">
+            <h4 class="font-bold text-secondary mb-2">Valuation & Appraisal</h4>
+            <p class="text-gray-400 mb-2"><strong>HouseCanary, CoreLogic, Cotality, C3 AI:</strong> AI-driven property valuation and appraisal</p>
+            <p class="text-gray-400">• Error rates: Below 5% (vs. traditional 7-10%)</p>
+            <p class="text-gray-400">• Speed: Valuations in minutes vs. days</p>
+            <p class="text-gray-400 text-sm">Market: Growing 30.5% annually, expected to reach $41.5B by 2033</p>
+          </div>
+        </div>
       </div>
 
       <div class="border-l-4 border-accent pl-8">
-        <h2 class="text-3xl font-bold mb-4 gradient-text">
-          Data & Analytics Infrastructure
+        <h2 class="text-3xl font-bold mb-6 gradient-text">
+          Data & Infrastructure
         </h2>
-        <p class="text-gray-400 mb-4">
-          Discover the data platforms and analytics tools enabling predictive insights in real estate.
+        <p class="text-gray-300 mb-6">
+          AI success depends critically on data infrastructure. The barrier to scaling CRE AI is not technology—it's data quality and integration.
         </p>
+
+        <h3 class="text-2xl font-bold text-accent mb-4">Critical Infrastructure Components</h3>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded bg-accent/5 border border-accent/20">
+            <h4 class="font-bold text-accent mb-2">Data Integration & APIs</h4>
+            <p class="text-gray-400">CRE technology ecosystems are becoming API-first. Platforms like Yardi now provide robust APIs enabling AI integrations with third-party tools. Success requires connecting:</p>
+            <p class="text-gray-400 text-sm mt-2">• Property management systems (Yardi, AppFolio, Entrata)</p>
+            <p class="text-gray-400 text-sm">• Financial systems (Argus, MRI, QuickBooks)</p>
+            <p class="text-gray-400 text-sm">• Building systems (HVAC, access control, energy monitoring)</p>
+            <p class="text-gray-400 text-sm">• Market data providers (CoStar, LoopNet)</p>
+          </div>
+
+          <div class="p-4 rounded bg-accent/5 border border-accent/20">
+            <h4 class="font-bold text-accent mb-2">Cloud Infrastructure</h4>
+            <p class="text-gray-400">AWS, Google Cloud, and Azure provide the computational infrastructure for AI:</p>
+            <p class="text-gray-400 text-sm mt-2">• Scalable compute for model training and inference</p>
+            <p class="text-gray-400 text-sm">• Managed AI services (SageMaker, Vertex AI, Azure ML)</p>
+            <p class="text-gray-400 text-sm">• Data warehouses (Redshift, BigQuery, Snowflake)</p>
+          </div>
+
+          <div class="p-4 rounded bg-accent/5 border border-accent/20">
+            <h4 class="font-bold text-accent mb-2">IoT & Building Sensors</h4>
+            <p class="text-gray-400">Real-time building data powers autonomous operations:</p>
+            <p class="text-gray-400 text-sm mt-2">• Environmental sensors (temperature, humidity, occupancy)</p>
+            <p class="text-gray-400 text-sm">• Energy monitoring systems</p>
+            <p class="text-gray-400 text-sm">• Predictive maintenance sensors (equipment diagnostics)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-l-4 border-primary pl-8">
+        <h2 class="text-3xl font-bold mb-6 gradient-text">
+          Emerging Technologies & Future Direction
+        </h2>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded bg-primary/5 border border-primary/20">
+            <h4 class="font-bold text-primary mb-2">Computer Vision & Property Analytics</h4>
+            <p class="text-gray-400">AI analyzing satellite and drone imagery for:</p>
+            <p class="text-gray-400 text-sm mt-2">• Site condition assessment and damage detection</p>
+            <p class="text-gray-400 text-sm">• Occupancy estimation from parking lot analysis</p>
+            <p class="text-gray-400 text-sm">• Competition tracking and market monitoring</p>
+          </div>
+
+          <div class="p-4 rounded bg-primary/5 border border-primary/20">
+            <h4 class="font-bold text-primary mb-2">Alternative Data Integration</h4>
+            <p class="text-gray-400">AI models incorporating non-traditional data sources:</p>
+            <p class="text-gray-400 text-sm mt-2">• Mobile device location data for tenant traffic patterns</p>
+            <p class="text-gray-400 text-sm">• Online transaction data for economic indicators</p>
+            <p class="text-gray-400 text-sm">• Social media sentiment for market intelligence</p>
+          </div>
+
+          <div class="p-4 rounded bg-primary/5 border border-primary/20">
+            <h4 class="font-bold text-primary mb-2">Agentic AI in CRE</h4>
+            <p class="text-gray-400">Next generation: AI agents that autonomously execute CRE workflows:</p>
+            <p class="text-gray-400 text-sm mt-2">• Autonomous deal analysis and underwriting</p>
+            <p class="text-gray-400 text-sm">• Self-optimizing portfolio management</p>
+            <p class="text-gray-400 text-sm">• Predictive issue resolution before tenant escalation</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="mt-16 p-8 rounded-lg bg-accent/5 border border-accent/20">
-      <h3 class="text-2xl font-bold mb-4">Technology Categories</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="space-y-3">
-          <h4 class="font-semibold text-accent">AI & Machine Learning</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex gap-2"><span class="text-primary">•</span> <span>Large Language Models</span></li>
-            <li class="flex gap-2"><span class="text-primary">•</span> <span>Computer Vision Systems</span></li>
-            <li class="flex gap-2"><span class="text-primary">•</span> <span>Predictive Analytics</span></li>
+    <!-- Technology Stack Overview -->
+    <div class="mt-16 p-8 rounded-lg bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/20">
+      <h3 class="text-2xl font-bold mb-6">The Integrated CRE Tech Stack</h3>
+      <p class="text-gray-300 mb-6">
+        Modern CRE organizations are building integrated stacks that combine:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-bold text-primary mb-3">Core Operations Layer</h4>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>✓ Property management (Yardi, AppFolio)</li>
+            <li>✓ Financial systems (Argus, IntellCRE)</li>
+            <li>✓ Building operations (BrainBox AI)</li>
+            <li>✓ Market intelligence (VTS, CoStar)</li>
           </ul>
         </div>
-        <div class="space-y-3">
-          <h4 class="font-semibold text-secondary">Infrastructure</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex gap-2"><span class="text-secondary">•</span> <span>Cloud Platforms</span></li>
-            <li class="flex gap-2"><span class="text-secondary">•</span> <span>Data Warehouses</span></li>
-            <li class="flex gap-2"><span class="text-secondary">•</span> <span>API Ecosystems</span></li>
+        <div>
+          <h4 class="font-bold text-secondary mb-3">AI Intelligence Layer</h4>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>✓ Generative AI (Claude, ChatGPT)</li>
+            <li>✓ Predictive models (demand, valuation)</li>
+            <li>✓ Computer vision and analytics</li>
+            <li>✓ Autonomous agents and automation</li>
           </ul>
         </div>
       </div>
+    </div>
+
+    <!-- Critical Success Factor -->
+    <div class="mt-12 p-8 rounded-lg bg-accent/5 border border-accent/20">
+      <h3 class="text-2xl font-bold mb-4 text-accent">The Data Infrastructure Imperative</h3>
+      <p class="text-gray-300 mb-4">
+        <strong>Key Finding:</strong> AI returns 3x higher ROI when embedded in existing workflows vs. deployed standalone.
+      </p>
+      <p class="text-gray-400 mb-4">
+        The difference between successful AI implementations (5% achieved objectives) and struggling pilots (92% initiated but haven't scaled) comes down to data infrastructure:
+      </p>
+      <ul class="text-gray-400 space-y-2">
+        <li class="flex gap-2"><span class="text-accent">✓</span> <span><strong>Data Quality:</strong> Clean, standardized data across all systems</span></li>
+        <li class="flex gap-2"><span class="text-accent">✓</span> <span><strong>Integration:</strong> APIs connecting property, financial, and operational systems</span></li>
+        <li class="flex gap-2"><span class="text-accent">✓</span> <span><strong>Real-time Access:</strong> Streaming data enabling immediate AI insights and actions</span></li>
+        <li class="flex gap-2"><span class="text-accent">✓</span> <span><strong>Governance:</strong> Clear data ownership and AI decision audit trails</span></li>
+      </ul>
     </div>
   </section>
 
