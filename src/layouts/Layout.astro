@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'CREFuture - AI and Commercial Real Estate' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/CREFuture/favicon.svg" />
+    <title>{title} | CREFuture</title>
+  </head>
+  <body class="bg-dark text-gray-100">
+    <header class="border-b border-primary/20">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/CREFuture/" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+          CREFuture
+        </a>
+        <ul class="flex gap-8">
+          <li><a href="/CREFuture/" class="hover:text-primary transition">Home</a></li>
+          <li><a href="/CREFuture/workforce/" class="hover:text-primary transition">Workforce</a></li>
+          <li><a href="/CREFuture/transformation/" class="hover:text-primary transition">Transformation</a></li>
+          <li><a href="/CREFuture/tech-stack/" class="hover:text-primary transition">Tech Stack</a></li>
+          <li><a href="/CREFuture/about/" class="hover:text-primary transition">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="min-h-screen">
+      <slot />
+    </main>
+
+    <footer class="border-t border-primary/20 py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center text-gray-400">
+        <p>&copy; 2026 CREFuture. Exploring the collision of AI and Commercial Real Estate.</p>
+      </div>
+    </footer>
+  </body>
+</html>
