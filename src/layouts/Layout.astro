@@ -14,22 +14,48 @@ const { title, description = 'CREFuture - AI and Commercial Real Estate' } = Ast
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/CREFuture/favicon.svg" />
     <title>{title} | CREFuture</title>
   </head>
   <body class="bg-dark text-gray-100">
     <header class="border-b border-primary/20">
-      <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/CREFuture/" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-          CREFuture
-        </a>
-        <ul class="flex gap-8">
-          <li><a href="/CREFuture/" class="hover:text-primary transition">Home</a></li>
-          <li><a href="/CREFuture/workforce/" class="hover:text-primary transition">Workforce</a></li>
-          <li><a href="/CREFuture/transformation/" class="hover:text-primary transition">Transformation</a></li>
-          <li><a href="/CREFuture/tech-stack/" class="hover:text-primary transition">Tech Stack</a></li>
-          <li><a href="/CREFuture/about/" class="hover:text-primary transition">About</a></li>
+      <nav class="max-w-6xl mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <a href="/CREFuture/" class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            CREFuture
+          </a>
+          <!-- Hamburger button (mobile only) -->
+          <button
+            id="nav-toggle"
+            class="md:hidden flex flex-col gap-1.5 p-2 focus:outline-none"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span class="block w-6 h-0.5 bg-gray-100 transition-all duration-300" id="bar1"></span>
+            <span class="block w-6 h-0.5 bg-gray-100 transition-all duration-300" id="bar2"></span>
+            <span class="block w-6 h-0.5 bg-gray-100 transition-all duration-300" id="bar3"></span>
+          </button>
+          <!-- Desktop nav -->
+          <ul class="hidden md:flex gap-6 lg:gap-8">
+            <li><a href="/CREFuture/" class="hover:text-primary transition">Home</a></li>
+            <li><a href="/CREFuture/workforce/" class="hover:text-primary transition">Workforce</a></li>
+            <li><a href="/CREFuture/transformation/" class="hover:text-primary transition">Transformation</a></li>
+            <li><a href="/CREFuture/tech-stack/" class="hover:text-primary transition">Tech Stack</a></li>
+            <li><a href="/CREFuture/about/" class="hover:text-primary transition">About</a></li>
+          </ul>
+        </div>
+        <!-- Mobile nav menu (hidden by default) -->
+        <ul
+          id="nav-menu"
+          class="md:hidden hidden flex-col gap-0 pt-4 pb-2 border-t border-primary/20 mt-3"
+        >
+          <li><a href="/CREFuture/" class="block py-2.5 px-1 hover:text-primary transition">Home</a></li>
+          <li><a href="/CREFuture/workforce/" class="block py-2.5 px-1 hover:text-primary transition">Workforce</a></li>
+          <li><a href="/CREFuture/transformation/" class="block py-2.5 px-1 hover:text-primary transition">Transformation</a></li>
+          <li><a href="/CREFuture/tech-stack/" class="block py-2.5 px-1 hover:text-primary transition">Tech Stack</a></li>
+          <li><a href="/CREFuture/about/" class="block py-2.5 px-1 hover:text-primary transition">About</a></li>
         </ul>
       </nav>
     </header>
@@ -39,9 +65,36 @@ const { title, description = 'CREFuture - AI and Commercial Real Estate' } = Ast
     </main>
 
     <footer class="border-t border-primary/20 py-8">
-      <div class="max-w-6xl mx-auto px-6 text-center text-gray-400">
+      <div class="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm md:text-base">
         <p>&copy; 2026 CREFuture. Exploring the collision of AI and Commercial Real Estate.</p>
       </div>
     </footer>
+
+    <script>
+      const toggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('nav-menu');
+      const bar1 = document.getElementById('bar1');
+      const bar2 = document.getElementById('bar2');
+      const bar3 = document.getElementById('bar3');
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = !menu?.classList.contains('hidden');
+        if (isOpen) {
+          menu?.classList.add('hidden');
+          menu?.classList.remove('flex');
+          toggle.setAttribute('aria-expanded', 'false');
+          bar1?.classList.remove('rotate-45', 'translate-y-2');
+          bar2?.classList.remove('opacity-0');
+          bar3?.classList.remove('-rotate-45', '-translate-y-2');
+        } else {
+          menu?.classList.remove('hidden');
+          menu?.classList.add('flex');
+          toggle.setAttribute('aria-expanded', 'true');
+          bar1?.classList.add('rotate-45', 'translate-y-2');
+          bar2?.classList.add('opacity-0');
+          bar3?.classList.add('-rotate-45', '-translate-y-2');
+        }
+      });
+    </script>
   </body>
 </html>

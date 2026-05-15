@@ -11,10 +11,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
 }
 
 /* Futuristic gradient background */
@@ -42,6 +46,11 @@ body {
 /* Button styles */
 .btn {
   @apply px-6 py-3 rounded-lg font-semibold transition-all;
+  /* Ensure minimum touch target size on mobile */
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -54,4 +63,24 @@ body {
 
 .btn-outline {
   @apply border-2 border-primary text-primary hover:bg-primary hover:text-dark transition;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 767px) {
+  /* Ensure images don't overflow their containers */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Tighter padding for card elements on small screens */
+  .p-8 {
+    padding: 1.25rem;
+  }
+
+  /* Ensure long words break on narrow screens */
+  p, li, h1, h2, h3, h4 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
 }
